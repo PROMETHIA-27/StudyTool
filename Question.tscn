@@ -1,0 +1,93 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[node name="QuestionPanel" type="PanelContainer"]
+anchor_right = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 983.0
+margin_bottom = 59.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+
+[node name="Contents" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 970.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Question" type="HBoxContainer" parent="ScrollContainer/Contents"]
+margin_right = 970.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuestionNumber2" type="CenterContainer" parent="ScrollContainer/Contents/Question"]
+margin_right = 46.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="NumberLabel" type="Label" parent="ScrollContainer/Contents/Question/QuestionNumber2"]
+margin_left = 15.0
+margin_top = 23.0
+margin_right = 31.0
+margin_bottom = 37.0
+text = "1.)"
+valign = 1
+
+[node name="QuestionText" type="ScrollContainer" parent="ScrollContainer/Contents/Question"]
+margin_left = 50.0
+margin_right = 970.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+size_flags_stretch_ratio = 20.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="MarginContainer" parent="ScrollContainer/Contents/Question/QuestionText"]
+margin_right = 920.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="QuestionLabel" type="Label" parent="ScrollContainer/Contents/Question/QuestionText/Container"]
+margin_top = 23.0
+margin_right = 920.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Placeholder?"
+valign = 1
+autowrap = true
+
+[node name="Answers" type="VBoxContainer" parent="ScrollContainer/Contents"]
+margin_top = 64.0
+margin_right = 970.0
+margin_bottom = 64.0

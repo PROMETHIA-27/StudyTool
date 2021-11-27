@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Checkmark.tscn" type="PackedScene" id=1]
+[ext_resource path="res://XMark.tscn" type="PackedScene" id=2]
+
+[node name="Answer" type="HBoxContainer"]
+margin_right = 982.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="CheckBox" parent="."]
+margin_right = 24.0
+margin_bottom = 40.0
+
+[node name="Letter" type="Label" parent="."]
+margin_left = 28.0
+margin_right = 45.0
+margin_bottom = 40.0
+size_flags_vertical = 5
+text = "A)."
+align = 1
+valign = 1
+
+[node name="Text" type="Label" parent="."]
+margin_left = 49.0
+margin_top = 13.0
+margin_right = 982.0
+margin_bottom = 27.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Placeholder"
+autowrap = true
+
+[node name="Checkmark" parent="." instance=ExtResource( 1 )]
+margin_left = 898.0
+margin_right = 938.0
+
+[node name="XMark" parent="." instance=ExtResource( 2 )]
+margin_left = 942.0
+margin_right = 982.0
